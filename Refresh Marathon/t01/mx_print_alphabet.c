@@ -17,7 +17,7 @@ void mx_print_alphabet(void) {
         }
         j++;
     }
-
+    
     write(1,"\n",1);
 }
 

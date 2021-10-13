@@ -16,38 +16,32 @@ int mx_binary_search(char **arr, int size, const char *s, int *count)
 
     int temp_count = 0;
 
-    while(first <= last)
-    {
+    while(first <= last) {
         temp_count++;
 
         *count = temp_count;
 
-        if(mx_strcmp(arr[middle],s) < 0)
-        {
+        if(mx_strcmp(arr[middle],s) < 0) {
             first = middle + 1;
         }
         
-        else if(mx_strcmp(arr[middle],s) == 0)
-        {
+        else if(mx_strcmp(arr[middle],s) == 0) {
             flag = 1;
             answer = middle + 1;
             break;
         }
 
-        else
-        {
+        else {
             last = middle - 1;
         }
         middle = (first + last) / 2;
     }
 
-    if(flag == 1)
-    {
+    if(flag == 1) {
         return answer - 1;
     }
 
-    else
-    {
+    else {
         *count = 0;
         return -1;
     }

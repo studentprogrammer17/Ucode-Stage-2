@@ -3,7 +3,7 @@ void mx_sort_arr_int(int *arr, int size);
 void mx_sort_arr_int(int *arr, int size) {
     int swap = -1;
     int temp = 0;
-
+    
     while(swap != 0) {
         swap = 0;
 
